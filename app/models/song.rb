@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   belongs_to :genre
   has_many :notes
 
-  def song_artist_name
-    
+  def artist_name
+
   end
 end
