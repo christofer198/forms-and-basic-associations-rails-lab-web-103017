@@ -33,7 +33,7 @@ class Song < ActiveRecord::Base
 
  def note_contents
    self.notes.map do |note|
-     note.content.flatten
+     note.content.to_a
    end
  end
 
