@@ -24,7 +24,6 @@ class Song < ActiveRecord::Base
    @note = Note.new
    @note.content = contents
    @note.save
-   
  end
 
 end
