@@ -28,7 +28,7 @@ class Song < ActiveRecord::Base
    noted = Note.new
    noted.content = content
    noted.save
-   self.notes << noted
+   self.notes << noted.content
  end
 
  def note_contents
