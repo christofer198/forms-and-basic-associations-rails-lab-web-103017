@@ -20,6 +20,11 @@ class Song < ActiveRecord::Base
    self.genre.name
  end
 
- def note_contents=(content)
+ def note_contents=(contents)
+   @note = Note.new
+   @note.content = contents
+   @note.save
+   
+ end
 
 end
