@@ -25,16 +25,16 @@ class Song < ActiveRecord::Base
  end
 
  def note_contents=(comments)
-     comments.each do |comment|
-       if comment.length > 0
-         note = Note.new
-         note.content = comment
-         note.save
-         self.notes << note
-       end
+   comments.each do |comment|
+     if comment.length > 0
+       note = Note.new
+       note.content = comment
+       note.save
+       self.notes << note
      end
    end
-   
+ end
+
  def note_contents
    self.notes.map do |note|
      note.content
