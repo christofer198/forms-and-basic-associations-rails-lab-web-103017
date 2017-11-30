@@ -18,7 +18,8 @@ class Song < ActiveRecord::Base
 
  def genre_name
    if self.genre
-   self.genre_name
+     self.genre.name
+   end
  end
 
  def note_contents=(contents)
