@@ -26,4 +26,8 @@ class Song < ActiveRecord::Base
    @note.save
  end
 
+ def note_contents
+   self.notes.all
+ end
+
 end
