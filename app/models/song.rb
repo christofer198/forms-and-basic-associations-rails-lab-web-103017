@@ -25,9 +25,7 @@ class Song < ActiveRecord::Base
  end
 
  def note_contents=(contents)
-   @note = Note.new
-   @note.content = contents
-   @note.save
+   binding.pry
  end
 
  def note_contents
