@@ -24,7 +24,11 @@ class Song < ActiveRecord::Base
    end
  end
 
- def note_contents=(contents)
+ def note_contents=(content)
+   noted = Note.new
+   noted.content = content
+   noted.save
+   self.notes << noted
  end
 
  def note_contents
